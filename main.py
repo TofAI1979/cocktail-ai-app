@@ -83,7 +83,7 @@ if "final_prompt" in st.session_state:
                     n=1
                 )
                 image_url = response.data[0].url
-                st.image(image_url, caption="Generated Cocktail", use_column_width=True)
+                st.image(image_url, caption="Generated Cocktail", use_container_width=True)
                 st.markdown(f"[🔽 Download Image]({image_url})", unsafe_allow_html=True)
             except Exception as e:
                 st.error(f"Error generating image: {str(e)}")
